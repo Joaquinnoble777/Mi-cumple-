@@ -137,28 +137,30 @@
             font-size: 1.1rem;
         }
 
-        /* Botón glow principal */
-        .btn-glow {
+        /* Botón principal estilo WhatsApp */
+        .btn-whatsapp {
             display: block;
             width: fit-content;
             margin: 1rem auto 1.8rem;
-            background: linear-gradient(90deg, #ff416c, #ff4b2b);
+            background: linear-gradient(90deg, #25D366, #128C7E);
             border: none;
-            padding: 0.9rem 2.5rem;
+            padding: 1rem 2.8rem;
             font-size: 1.3rem;
             font-weight: bold;
             color: white;
             border-radius: 60px;
             cursor: pointer;
             transition: all 0.3s;
-            box-shadow: 0 0 10px rgba(255, 75, 43, 0.6);
+            box-shadow: 0 0 15px rgba(37, 211, 102, 0.5);
             text-transform: uppercase;
             letter-spacing: 1.5px;
+            text-decoration: none;
+            text-align: center;
         }
 
-        .btn-glow:hover {
+        .btn-whatsapp:hover {
             transform: scale(1.02);
-            box-shadow: 0 0 20px #ff416c, 0 0 30px #ff4b2b;
+            box-shadow: 0 0 25px #25D366, 0 0 20px #128C7E;
         }
 
         /* Secciones comunes */
@@ -222,80 +224,34 @@
             border: 0;
         }
 
-        /* Formulario */
-        .form-rsvp {
-            background: rgba(0, 0, 0, 0.5);
-            border-radius: 1.8rem;
-            padding: 1.2rem;
+        /* Grupo de WhatsApp - Tarjeta */
+        .whatsapp-card {
+            background: rgba(37, 211, 102, 0.15);
+            border-radius: 2rem;
+            padding: 1.5rem;
+            text-align: center;
+            backdrop-filter: blur(8px);
+            border: 1px solid #25D366;
+            margin-top: 1rem;
         }
-
-        .form-group {
+        .whatsapp-card p {
+            color: #d4ffd4;
             margin-bottom: 1.2rem;
-        }
-
-        label {
-            display: block;
-            margin-bottom: 0.4rem;
-            color: #ffdb9f;
-            font-weight: 500;
-            font-size: 0.9rem;
-        }
-
-        input, select, textarea {
-            width: 100%;
-            padding: 0.8rem 1rem;
-            background: rgba(20, 25, 45, 0.9);
-            border: 1px solid #ff66c0;
-            border-radius: 1.5rem;
-            color: white;
             font-size: 1rem;
-            transition: 0.2s;
         }
-
-        input:focus, select:focus, textarea:focus {
-            outline: none;
-            border-color: #ffdf80;
-            box-shadow: 0 0 8px #ff66c0;
-        }
-
-        .checkbox-group {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-        .checkbox-group input {
-            width: auto;
-            transform: scale(1.2);
-        }
-
-        button[type="submit"] {
-            background: linear-gradient(95deg, #00c6fb, #005bea);
-            width: 100%;
-            padding: 0.9rem;
-            border: none;
-            border-radius: 3rem;
-            font-weight: bold;
-            font-size: 1.2rem;
+        .whatsapp-card .btn-whatsapp-small {
+            background: #25D366;
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
             color: white;
-            cursor: pointer;
+            font-weight: bold;
+            text-decoration: none;
             transition: 0.2s;
-            box-shadow: 0 5px 15px rgba(0, 91, 234, 0.4);
         }
-
-        button[type="submit"]:hover {
-            transform: translateY(-2px);
-            filter: brightness(1.05);
-        }
-
-        /* resumen */
-        .resumen-card {
-            margin-top: 1.5rem;
-            background: rgba(0, 0, 0, 0.6);
-            border-radius: 1.5rem;
-            padding: 1rem;
-            color: #bbe1ff;
-            font-size: 0.9rem;
-            border-left: 3px solid #ffb86b;
+        .whatsapp-card .btn-whatsapp-small:hover {
+            background: #128C7E;
+            transform: scale(1.02);
         }
 
         .footer {
@@ -304,62 +260,6 @@
             color: #aaa;
             font-size: 0.85rem;
             letter-spacing: 1px;
-        }
-
-        /* modal custom */
-        .modal-message {
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%) scale(0.9);
-            background: #11121c;
-            backdrop-filter: blur(20px);
-            border: 1px solid #ff66c0;
-            border-radius: 2rem;
-            padding: 1.8rem 2rem;
-            text-align: center;
-            z-index: 1000;
-            opacity: 0;
-            visibility: hidden;
-            transition: all 0.25s ease;
-            box-shadow: 0 0 50px rgba(255, 0, 212, 0.5);
-            width: 85%;
-            max-width: 380px;
-        }
-        .modal-message.show {
-            opacity: 1;
-            visibility: visible;
-            transform: translate(-50%, -50%) scale(1);
-        }
-        .modal-message p {
-            color: white;
-            font-size: 1.3rem;
-            margin-bottom: 1rem;
-        }
-        .modal-message button {
-            background: #ff66c0;
-            border: none;
-            padding: 0.5rem 1.8rem;
-            border-radius: 2rem;
-            font-weight: bold;
-            cursor: pointer;
-        }
-        .overlay-modal {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.7);
-            backdrop-filter: blur(4px);
-            z-index: 999;
-            opacity: 0;
-            visibility: hidden;
-            transition: 0.2s;
-        }
-        .overlay-modal.show {
-            opacity: 1;
-            visibility: visible;
         }
 
         @keyframes fadeInUp {
@@ -412,8 +312,11 @@
             <div class="detail-item"><div class="detail-icon">🎶</div><div class="detail-text"><strong>Música + baile</strong> buena vibra toda la noche</div></div>
         </div>
 
+        <!-- Botón principal: Confirmar asistencia via WhatsApp -->
         <div style="text-align: center;">
-            <button id="scrollToFormBtn" class="btn-glow">✨ Confirmar asistencia ✨</button>
+            <a href="https://chat.whatsapp.com/FcsLFFzAzo4Jh2HoOFPvVh" target="_blank" class="btn-whatsapp" id="confirmarBtn">
+                💬 Confirmar asistencia al grupo
+            </a>
         </div>
 
         <!-- Que traer -->
@@ -444,43 +347,16 @@
             </p>
         </div>
 
-        <!-- RSVP Formulario -->
-        <div class="section" id="rsvp-section">
-            <div class="section-title">✉️ Confirma tu asistencia</div>
-            <div class="form-rsvp">
-                <form id="rsvpForm">
-                    <div class="form-group">
-                        <label>Nombre y apellido *</label>
-                        <input type="text" id="nombre" placeholder="Ej: Lucía Rodríguez" required>
-                    </div>
-                    <div class="form-group">
-                        <label>WhatsApp / Teléfono</label>
-                        <input type="tel" id="telefono" placeholder="+598 99 123 456">
-                    </div>
-                    <div class="form-group">
-                        <label>¿Vas a venir?</label>
-                        <select id="asistencia" required>
-                            <option value="">Selecciona...</option>
-                            <option value="Sí">Sí, voy seguro 🥳</option>
-                            <option value="No">No, no puedo 😔</option>
-                            <option value="Tal vez">Tal vez, luego confirmo 🤞</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label>¿Cuántos acompañantes traés?</label>
-                        <input type="number" id="acompanantes" min="0" max="10" value="0">
-                    </div>
-                    <div class="form-group checkbox-group">
-                        <input type="checkbox" id="usaPiscina">
-                        <label>🏊‍♂️ Voy a usar la piscina climatizada</label>
-                    </div>
-                    <div class="form-group">
-                        <label>Comentarios / alergias / música?</label>
-                        <textarea rows="2" id="comentarios" placeholder="Dejanos tu mensaje..."></textarea>
-                    </div>
-                    <button type="submit" id="submitBtn">📲 Enviar confirmación</button>
-                </form>
-                <div id="resumenContainer" class="resumen-card" style="display: none;"></div>
+        <!-- Sección de grupo de WhatsApp destacada -->
+        <div class="section" id="grupo-whatsapp">
+            <div class="section-title">👥 Lista de invitados</div>
+            <div class="whatsapp-card">
+                <p>🎉 ¡Confirmá tu asistencia y enterate de todos los detalles en el grupo exclusivo! <br> 
+                Unite para saber novedades, compartir música y coordinar.</p>
+                <a href="https://chat.whatsapp.com/FcsLFFzAzo4Jh2HoOFPvVh" target="_blank" class="btn-whatsapp-small">
+                    🔗 Unirse al grupo de WhatsApp
+                </a>
+                <p style="margin-top: 1rem; font-size: 0.8rem;">Solo buena onda 😎 | Compartí tus ganas de festejar</p>
             </div>
         </div>
 
@@ -490,140 +366,17 @@
     </div>
 </div>
 
-<!-- modal personalizado -->
-<div class="overlay-modal" id="modalOverlay"></div>
-<div class="modal-message" id="successModal">
-    <p>🎉 ¡Gracias por confirmar! <br> Nos vemos en la fiesta 🎉</p>
-    <button id="closeModalBtn"> Cerrar</button>
-</div>
-
 <script>
     (function() {
-        // Elementos del DOM
-        const form = document.getElementById('rsvpForm');
-        const resumenDiv = document.getElementById('resumenContainer');
-        const modal = document.getElementById('successModal');
-        const overlay = document.getElementById('modalOverlay');
-        const closeModalBtn = document.getElementById('closeModalBtn');
-        const scrollBtn = document.getElementById('scrollToFormBtn');
-
-        // Función para cerrar modal
-        function closeModal() {
-            modal.classList.remove('show');
-            overlay.classList.remove('show');
-        }
-
-        function showModal() {
-            modal.classList.add('show');
-            overlay.classList.add('show');
-        }
-
-        if(closeModalBtn) closeModalBtn.addEventListener('click', closeModal);
-        if(overlay) overlay.addEventListener('click', closeModal);
-
-        // Scroll al formulario
-        if(scrollBtn) {
-            scrollBtn.addEventListener('click', () => {
-                const rsvpSection = document.getElementById('rsvp-section');
-                if(rsvpSection) {
-                    rsvpSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }
+        // Puedes agregar un pequeño tracking o mensaje de bienvenida opcional
+        const botones = document.querySelectorAll('a[href*="chat.whatsapp.com"]');
+        botones.forEach(btn => {
+            btn.addEventListener('click', function() {
+                // Simple registro de que se hizo clic (opcional)
+                console.log('Redirigiendo al grupo de WhatsApp para confirmar asistencia');
+                // También podrías mostrar un pequeño toast, pero no es necesario
             });
-        }
-
-        // validación simple y guardado en localStorage + resumen
-        function validarFormulario() {
-            const nombre = document.getElementById('nombre').value.trim();
-            if(!nombre) {
-                alert("Por favor ingresa tu nombre y apellido.");
-                return false;
-            }
-            const asistencia = document.getElementById('asistencia').value;
-            if(!asistencia) {
-                alert("Selecciona si vas a venir o no.");
-                return false;
-            }
-            return true;
-        }
-
-        function actualizarResumenYStorage(data) {
-            // guardar en localStorage (simulación simple, guardamos un array)
-            let existing = localStorage.getItem('rsvp_cumple');
-            let registros = [];
-            if(existing) {
-                try {
-                    registros = JSON.parse(existing);
-                } catch(e) { registros = []; }
-            }
-            registros.push(data);
-            localStorage.setItem('rsvp_cumple', JSON.stringify(registros));
-
-            // Mostrar resumen del último enviado
-            const piscinaTexto = data.usaPiscina ? "✅ Usará piscina" : "❌ No usará piscina";
-            const acompanantesNum = data.acompanantes === 0 ? "sin acompañantes" : (data.acompanantes + " acompañante(s)");
-            resumenDiv.style.display = "block";
-            resumenDiv.innerHTML = `
-                <strong>📋 Última confirmación:</strong><br>
-                🧑 ${data.nombre} | ${data.asistencia}<br>
-                👥 ${acompanantesNum}<br>
-                💬 ${piscinaTexto}<br>
-                📝 Comentario: ${data.comentarios || "—"}<br>
-                📞 Tel: ${data.telefono || "No especificado"}
-            `;
-        }
-
-        // Manejo del envío
-        form.addEventListener('submit', (e) => {
-            e.preventDefault();
-            if(!validarFormulario()) return;
-
-            const nombre = document.getElementById('nombre').value.trim();
-            const telefono = document.getElementById('telefono').value.trim();
-            const asistencia = document.getElementById('asistencia').value;
-            let acompanantes = parseInt(document.getElementById('acompanantes').value, 10);
-            if(isNaN(acompanantes)) acompanantes = 0;
-            const usaPiscina = document.getElementById('usaPiscina').checked;
-            const comentarios = document.getElementById('comentarios').value.trim();
-
-            const formData = {
-                nombre: nombre,
-                telefono: telefono,
-                asistencia: asistencia,
-                acompanantes: acompanantes,
-                usaPiscina: usaPiscina,
-                comentarios: comentarios,
-                fechaRegistro: new Date().toLocaleString()
-            };
-
-            actualizarResumenYStorage(formData);
-            showModal();
         });
-
-        // Si hay datos previos al cargar, mostrar resumen del último registro guardado?
-        function cargarUltimoResumen() {
-            let existing = localStorage.getItem('rsvp_cumple');
-            if(existing) {
-                try {
-                    let registros = JSON.parse(existing);
-                    if(registros.length > 0) {
-                        const ultimo = registros[registros.length - 1];
-                        const piscinaTexto = ultimo.usaPiscina ? "✅ Usará piscina" : "❌ No usará piscina";
-                        const acompanantesNum = ultimo.acompanantes === 0 ? "sin acompañantes" : (ultimo.acompanantes + " acompañante(s)");
-                        resumenDiv.style.display = "block";
-                        resumenDiv.innerHTML = `
-                            <strong>📋 Tu última confirmación registrada:</strong><br>
-                            🧑 ${ultimo.nombre} | ${ultimo.asistencia}<br>
-                            👥 ${acompanantesNum}<br>
-                            💬 ${piscinaTexto}<br>
-                            📝 Comentario: ${ultimo.comentarios || "—"}<br>
-                            📞 Tel: ${ultimo.telefono || "No especificado"}
-                        `;
-                    }
-                } catch(e) {}
-            }
-        }
-
-        cargarUltimoResumen();
     })();
 </script>
 </body>
